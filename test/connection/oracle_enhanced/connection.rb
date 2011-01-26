@@ -8,9 +8,7 @@ ActiveRecord::Base.configurations = {
     :adapter  => :oracle_enhanced,
     :username => 'rails_sql_views_unittest',
     :password => 'rails',
-    :host     => 'localhost',
-    :database => 'mydev',
-    :encoding => 'utf8',
+    :database => 'test',
     :procedures_file  => 'procedures.sql',
     :schema_file      => 'schema.sql',
   }
