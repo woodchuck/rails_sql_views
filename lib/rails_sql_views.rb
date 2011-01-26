@@ -24,6 +24,7 @@
 $:.unshift(File.dirname(__FILE__))
 
 require 'active_record'
+require 'active_record/base'
 
 require 'core_ext/module'
 
