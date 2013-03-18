@@ -50,6 +50,10 @@ module RailsSqlViews
           raise "No view called #{view} found"
         end
       end
+
+      def drop_table_with_cascade(table_name, options = {})
+        execute "DROP TABLE #{quote_table_name(table_name)} CASCADE CONSTRAINTS"
+      end
     end
   end
 end

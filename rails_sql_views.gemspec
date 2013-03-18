@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{rails_sql_views}
+  s.name = "rails_sql_views"
   s.version = "0.8.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Anthony Eden"]
-  s.date = %q{2010-08-25}
-  s.description = %q{Adds support for using SQL views within ActiveRecord}
-  s.email = %q{josh@technicalpickles.com}
+  s.date = "2012-02-02"
+  s.description = "Adds support for using SQL views within ActiveRecord"
+  s.email = "josh@technicalpickles.com"
   s.extra_rdoc_files = [
     "LICENSE",
      "README",
@@ -40,36 +40,35 @@ Gem::Specification.new do |s|
      "lib/rails_sql_views/schema_dumper.rb",
      "lib/rails_sql_views/version.rb"
   ]
-  s.homepage = %q{http://activewarehouse.rubyforge.org/rails_sql_views}
+  s.homepage = "http://activewarehouse.rubyforge.org/rails_sql_views"
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.6}
-  s.summary = %q{Library which adds SQL Views to ActiveRecord.}
+  s.rubygems_version = "1.8.15"
+  s.summary = "Library which adds SQL Views to ActiveRecord."
   s.test_files = [
-    "test/adapter_test.rb",
-     "test/connection/native_mysql/connection.rb",
-     "test/connection/native_postgresql/connection.rb",
-     "test/connection/oracle_enhanced/connection.rb",
+    "test/view_operations_test.rb",
+     "test/adapter_test.rb",
+     "test/schema_dumper_test.rb",
+     "test/view_model_test.rb",
+     "test/schema.native_mysql.expected.rb",
+     "test/schema.oracle_enhanced.expected.rb",
+     "test/test_helper.rb",
      "test/models/item.rb",
+     "test/models/v_person.rb",
+     "test/models/v_profile.rb",
      "test/models/person.rb",
      "test/models/person2.rb",
      "test/models/place.rb",
-     "test/models/v_person.rb",
-     "test/models/v_profile.rb",
-     "test/schema.native_mysql.expected.rb",
-     "test/schema.native_postgresql.expected.rb",
-     "test/schema.oracle_enhanced.expected.rb",
-     "test/schema_dumper_test.rb",
-     "test/test_helper.rb",
-     "test/view_model_test.rb",
-     "test/view_operations_test.rb"
+     "test/connection/native_postgresql/connection.rb",
+     "test/connection/oracle_enhanced/connection.rb",
+     "test/connection/native_mysql/connection.rb",
+     "test/schema.native_postgresql.expected.rb"
   ]
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
-    if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<activerecord>, [">= 0"])
     else
       s.add_dependency(%q<activerecord>, [">= 0"])
